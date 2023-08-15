@@ -38,3 +38,4 @@ protected:
     }
     QMainWindow::changeEvent(e);
 ```
+2. 在顶层cmake中使用```include(languageConfig.cmake) ``` 或者使用 ```find_packge(language)```
