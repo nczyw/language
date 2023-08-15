@@ -40,7 +40,7 @@ protected:
 ```
 2. 在顶层cmake中使用```include(languageConfig.cmake) ``` 或者使用 ```find_packge(language)```
 ## 使用方法
-   ```c++
+```c++
    Language().getLanguagelist(); //获取一共有多少语言
    Language().setLanguage("语言"); //设置一种语言
-    ```
+```
