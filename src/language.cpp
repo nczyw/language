@@ -7,7 +7,7 @@ Language::Language(QObject * parent) : QObject(parent)
 
 QStringList Language::getLanguagelist()
 {
-    QDir dir(QApplication::applicationDirPath() + "/language/");
+    QDir dir(QApplication::applicationDirPath() + "/languages/");
     dir.setFilter(QDir::NoDotAndDotDot | QDir::AllEntries);
     QStringList filelist = dir.entryList();
     QStringList filterlist;
@@ -22,7 +22,7 @@ QStringList Language::getLanguagelist()
 
 bool Language::setLanguage(QString lang)
 {
-    bool a1 = Language::SoftWareLanguage->load(QApplication::applicationDirPath() + "/language/" + lang + ".qm");
+    bool a1 = Language::SoftWareLanguage->load(QApplication::applicationDirPath() + "/languages/" + lang + ".qm");
     bool a3 = qApp->installTranslator(Language::SoftWareLanguage);
     if(a1 && a3) {
         //qDebug() << "Set language: " + lang;
